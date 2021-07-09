@@ -27,7 +27,7 @@ test("form shows success message on submit with form details", () => {
     // Act
     const first_name = screen.queryAllByLabelText(/firt name/i);
     const last_name = screen.queryAllByLabelText(/last name/i)
-    const button = screen.qetByRole(/checkout/i);
+    const button = screen.getByRole('button', {name: /checkout/i})
 
     userEvent.type(first_name, 'amanuel')
     userEvent.type(last_name, 'gilay')
